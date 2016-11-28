@@ -21,7 +21,7 @@ $.path.task.forEach(function(taskPath) {
 });
 
 $.gulp.task('default', $.gulp.series(
-  'clean',
+  'clean','js:lint',
   $.gulp.parallel(
     'sass',
     'pug',

@@ -1,11 +1,13 @@
 {
     "env": {
-        "browser": true
+        "browser": true,
+        "node": true
     },
     "extends": "eslint:recommended",
     "rules": {
-        "indent": [2, 2],
+        "indent": [2, 4],
         "quotes": [2, "single"],
-        "semi": [2, "always"]
+        "semi": [1, "always"],
+        "no-unused-vars" : 1
     }
 }
