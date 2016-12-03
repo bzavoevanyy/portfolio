@@ -16,12 +16,12 @@ global.$ = {
   gp: require('gulp-load-plugins')()
 };
 
-$.path.task.forEach(function(taskPath) {
+$.path.task.forEach(function (taskPath) {
   require(taskPath)();
 });
 
 $.gulp.task('default', $.gulp.series(
-  'clean','js:lint',
+  'clean', 'js:lint',
   $.gulp.parallel(
     'sass',
     'pug',

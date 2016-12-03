@@ -1,0 +1,48 @@
+.sayabout-wrap
+  img.list1(src='assets/img/list1.png')
+  img.list2(src='assets/img/list2.png')
+  img.list3(src='assets/img/list3.png')
+  .main-title
+    .main-title__block
+      h1.main-title__text Что обо мне <br> говорят
+      svg.underline
+        use(xlink:href="assets/img/sprite.svg#line")
+  .comments
+    .comment-left
+
+      .comment__img-circle
+        img(src="/assets/img/photokovald.png").comment__img
+      .comment__text
+        i(aria-hidden="true").fa.fa-5x.fa-quote-left.commets__quote
+        p.
+          Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool!
+          2 месяца только самых тяжелых испытаний и бессонных ночей!
+      .comment__sign
+        p.comment__sign-name Ковальчук дмитрий
+        span - основатель LoftSchool
+    .comment-right
+      .comment__img-circle
+        img(src="/assets/img/photozar.png").comment__img
+      .comment__text
+        i(aria-hidden="true").fa.fa-5x.fa-quote-left.commets__quote
+        p.
+          Этот код выдержет любые испытания.
+          Только пожалуйста, не загружается сайт на слишком старых браузерах!
+      .comment__sign
+        p.comment__sign-name Зар Захаров
+        span - преподаватель
+  .feedback
+    .feedback-title
+      h6.main-title__text Связаться со мной
+      svg.underline
+        use(xlink:href="assets/img/sprite.svg#line")
+    form.feedback-form
+      input(placeholder="Имя").feedback__name
+      input(placeholder="Email").feedback__e-mail
+      textarea(placeholder="Ваше сообщение").feedback__message
+    .feedback__buttons
+      button.feedback__send Отправить
+      button.feedback__clear Очистить
+  .arrow-up
+    svg.socials-icon__img.socials-icon__img-arrow_down
+      use(xlink:href="assets/img/sprite.svg#arrow_down")

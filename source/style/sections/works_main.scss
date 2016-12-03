@@ -1,15 +1,8 @@
 .main-wrap {
-  min-width: 100%;
-  min-height: 100%;
   position: relative;
 }
 
 .main {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
@@ -30,13 +23,18 @@
   align-items: center;
   background: url("../img/works_header.svg") no-repeat;
   background-position: center;
+  text-align: center;
 }
 
-.main-title__line {
+.underline {
   height: 3px;
   width: 90px;
   fill: #373e42;
   margin-bottom: 35px;
+}
+
+.underline-desc {
+  fill: #556338;
 }
 
 .main-title__text {
@@ -44,6 +42,7 @@
   font-size: 63px;
   color: #373e42;
   margin-top: 70px;
+  font-weight: normal;
 }
 
 .main-content {
@@ -62,20 +61,23 @@
   padding-left: 125px;
   padding-right: 125px;
   background-color: #ebefe2;
+
 }
 
 .content-disc__title {
   font-family: SansusRegular;
   font-size: 35px;
-  color: #373e42;
+  color: #556338;
   text-align: center;
   margin-bottom: 20px;
+  font-weight: normal;
 }
 
 .content-disc__skills {
   font-family: RobotoMedium;
   font-size: 16px;
   color: #6c9c5a;
+  margin-bottom: 55px;
 }
 
 .content-disc__linkblock {
@@ -158,6 +160,10 @@
   background-color: #566358;
   opacity: 0.5;
   display: flex;
+}
+
+.view-small__fill-dark {
+  opacity: 0.6;
 }
 
 .view-left__arrow {

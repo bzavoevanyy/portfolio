@@ -1,28 +1,30 @@
 header {
-  min-width: 100%;
-  min-height: 100%;
   position: relative;
-
   background-image: url("/assets/img/water.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .header-wrapper {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;
+  height: 100vh;
+}
+
+.dark-block {
+  position: absolute;
+  width: 100%;
+  height: 230px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0));
+  z-index: 1;
 }
 
 .top-container {
   display: flex;
   justify-content: space-between;
   padding-bottom: 50px;
+  z-index: 2;
 }
 
 .mainmenu {
@@ -37,11 +39,10 @@ header {
 
 .socials-icons__item {
   display: inline-block;
-  margin-left: 30px;
-}
-
-.socials-icon__link {
-
+  margin-left: 20px;
+  &:first-child {
+    margin-left: 30px;
+  }
 }
 
 .socials-icon__img {
@@ -51,6 +52,11 @@ header {
   &:hover {
     fill: #4e8839;
   }
+}
+
+.mainmenu .socials-icon__img {
+  width: 45px;
+  height: 45px;
 }
 
 .logo-wrapper {
@@ -76,7 +82,6 @@ header {
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: 15px;
-  z-index: 100;
 }
 
 .logo-img__item {
@@ -89,6 +94,7 @@ header {
   color: #fff;
   font-family: RobotoMedium;
   line-height: 45px;
+  font-weight: normal;
 }
 
 .logo__subtext {
@@ -96,6 +102,7 @@ header {
   color: #fff;
   font-family: RobotoRegular;
   line-height: 25px;
+  font-weight: normal;
 }
 
 .logo-background {
@@ -103,7 +110,7 @@ header {
   top: 100px;
   left: 135px;
   opacity: 0.15;
-  z-index: 0;
+  z-index: -1;
 }
 
 .socials-icon__img-arrow_down {
@@ -115,7 +122,6 @@ header {
 
 .header-traingle {
   height: 100px;
-
 }
 
 .header-traingle__left, .header-traingle__right {
