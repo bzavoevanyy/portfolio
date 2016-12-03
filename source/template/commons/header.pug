@@ -1,0 +1,35 @@
+header.header
+    .header-wrapper
+        .top-container
+            .socials-icons
+                ul.socials-icons__list
+                    li.socials-icons__item
+                        a.socials-icon__link(href='#')
+                            svg.socials-icon__img
+                                use(xlink:href="assets/img/sprite.svg#vk")
+                    li.socials-icons__item
+                        a.socials-icon__link(href='#')
+                            svg.socials-icon__img
+                                use(xlink:href="assets/img/sprite.svg#github")
+                    li.socials-icons__item
+                        a.socials-icon__link(href='#')
+                            svg.socials-icon__img
+                                use(xlink:href="assets/img/sprite.svg#linkedin")
+            .mainmenu
+                a(href='#')
+                    svg.socials-icon__img
+                        use(xlink:href="assets/img/sprite.svg#hamburger")
+
+        .logo-wrapper
+            .logo
+                .logo-img
+                    img.logo-img__item(src='/assets/img/logo.jpg')
+                h3.logo__text Богдан Завоёваный
+                h5.logo__subtext Личный сайт вэб-разработчика
+        svg.socials-icon__img.socials-icon__img-arrow_down
+            use(xlink:href="assets/img/sprite.svg#arrow_down")
+
+        svg.header-traingle(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1200 100" preserveaspectratio="none")
+            polygon.header-traingle__left(points="0,0   0,100   600,100")
+            polygon.header-traingle__right(points="600,100   1200,100   1200,0")
+

@@ -1,5 +1,9 @@
-body {
-  margin: 0;
-}
 
-@import 'common/greating';
+
+@import 'layout/adjustment';
+
+@import 'sections/header';
+
+@import 'sections/works_main';
+
+@import 'layout/fonts';
