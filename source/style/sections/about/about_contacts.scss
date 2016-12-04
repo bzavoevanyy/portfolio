@@ -1,0 +1,39 @@
+.contacts {
+  height: 100vh;
+  background: url("../img/map.png") no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contacts-links {
+  width:380px;
+  border-radius: 10px;
+  opacity: 0.9;
+  margin-top: -186px;
+  overflow: hidden;
+}
+.contacts-links-title {
+  width:auto;
+}
+.contancts-linkwrap {
+  text-align: left;
+  width: 80%;
+  margin-bottom: 40px;
+  margin-left: 40px;
+}
+.contacts__link {
+  font-family: RobotoMedium;
+  font-size: 16px;
+  font-weight: normal;
+  text-decoration: none;
+  color: #455a64;
+  line-height: 36px;
+  display: block;
+
+}
+.contacts__icon {
+  margin-right: 10px;
+  color: #6c9c5a;
+}
