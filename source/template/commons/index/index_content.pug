@@ -1,0 +1,23 @@
+header.header.header-index
+  .header-wrapper
+    .dark-block
+    .logo-wrapper.logo-wrapper-index
+      .logo.logo-index
+        .logo-img
+          img.logo-img__item(src='assets/img/logo.jpg' alt="logo")
+        h3.logo__text.logo__text-index Богдан Завоёваный
+        h5.logo__subtext Личный сайт вэб-разработчика
+        .socials-icons
+          ul.socials-icons__list
+            - var $icons = ['vk', 'github', 'linkedin']
+            each $item in $icons
+              li.socials-icons__item
+                a.socials-icon__link(href='#')
+                  svg.socials-icon__img.socials-icon__img-index
+                    use(xlink:href="assets/img/sprite.svg#" + $item)
+      .menu-buttons
+        a(href="works.html").menu__button Мои работы
+        a(href="about.html").menu__button Обо мне
+        a(href="blog.html").menu__button Блог
+  .footer-bottom.footer-bottom-index
+    p.copyright © Богдан Завоёваный | Создано с любовью в LoftSchool | 2016
