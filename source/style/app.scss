@@ -4,9 +4,13 @@
 
 @import 'sections/header';
 
-@import 'sections/works_main';
+@import 'sections/works/works_main';
 
-@import 'sections/works_sayabout.scss';
+@import 'sections/works/works_sayabout';
+
+@import "sections/about/about_main";
+
+@import "sections/about/about_contacts";
 
 @import 'sections/footer';
 
