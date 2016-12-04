@@ -1,25 +1,26 @@
-.footer-wrap
-  .footer-top
-    .footer-aboutsite
-      p.footer-aboutsite__text Этот сайт я сделал в рамках обучения  в Школе онлайн образования LoftSchool
-    .footer-links
-      ul.menu
-        - var $menu = {'works':'Мои работы', 'about':'Обо мне', 'blog':'Блог','login':'Авторизация'}
-        each $value, $key in $menu
-          li.menu__item
-            a.menu__link(href=$key + '.html')= $value
-      .socials-icons.socials-icons_footer
-        ul.socials-icons__list
-          - var $icons = ['vk', 'github', 'linkedin']
-          each $item in $icons
-            li.socials-icons__item.socials-icons__item_footer
-              a.socials-icon__link(href='#')
-                svg.socials-icon__img
-                  use(xlink:href="assets/img/sprite.svg#" + $item)
-    .footer-quote
-      p.footer-quote__text.
-        Всегда пишите код так, будто сопровождать его будет склонный к
-        насилию психопат, который знает, где вы живете.
-      p.footer-quote__text — Martin Golding
-  .footer-bottom
-    p.copyright © Богдан Завоёваный | Создано с любовью в LoftSchool | 2016
+footer.footer
+  .footer-wrap
+    .footer-top
+      .footer-aboutsite
+        p.footer-aboutsite__text Этот сайт я сделал в рамках обучения  в Школе онлайн образования LoftSchool
+      .footer-links
+        ul.menu
+          - var $menu = {'works':'Мои работы', 'about':'Обо мне', 'blog':'Блог','login':'Авторизация'}
+          each $value, $key in $menu
+            li.menu__item
+              a.menu__link(href=$key + '.html')= $value
+        .socials-icons.socials-icons_footer
+          ul.socials-icons__list
+            - var $icons = ['vk', 'github', 'linkedin']
+            each $item in $icons
+              li.socials-icons__item.socials-icons__item_footer
+                a.socials-icon__link(href='#')
+                  svg.socials-icon__img
+                    use(xlink:href="assets/img/sprite.svg#" + $item)
+      .footer-quote
+        p.footer-quote__text.
+          Всегда пишите код так, будто сопровождать его будет склонный к
+          насилию психопат, который знает, где вы живете.
+        p.footer-quote__text — Martin Golding
+    .footer-bottom
+      p.copyright © Богдан Завоёваный | Создано с любовью в LoftSchool | 2016
