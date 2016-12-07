@@ -1,11 +1,12 @@
 .contacts {
   height: 100vh;
-  background: url("../img/map.png") no-repeat;
-  background-size: cover;
-  background-position: bottom;
+  //background: url("../img/map.png") no-repeat;
+  //background-size: cover;
+  //background-position: bottom;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .contacts-links {
   width:380px;
@@ -36,4 +37,12 @@
 .contacts__icon {
   margin-right: 10px;
   color: #6c9c5a;
+}
+.map {
+  position: absolute;
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  //z-index: -1;
 }
