@@ -13,6 +13,7 @@ global.$ = {
   del: require('del'),
   merge: require('merge-stream'),
   browserSync: require('browser-sync').create(),
+  webpack: require('webpack-stream'),
   gp: require('gulp-load-plugins')()
 };
 
@@ -21,12 +22,12 @@ $.path.task.forEach(function (taskPath) {
 });
 
 $.gulp.task('default', $.gulp.series(
-  'clean', 'js:lint',
+  'clean',
   $.gulp.parallel(
     'sass',
     'pug',
     'js:foundation',
-    'js:process',
+    'webpack',
     'sprite',
     'copy:image',
     'css:foundation',
