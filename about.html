@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="assets/css/foundation.css">
     <link rel="stylesheet" href="assets/css/app.css">
     <script src="assets/js/foundation.js" defer></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArk4QgIwFYJW2610eGLU6tdImkGIvICpE&amp;callback=initMap"></script>
-    <script src="assets/js/app.js" defer></script><!--[if lt IE 9]>
+    <script src="assets/js/main.js" defer></script><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body>
@@ -47,6 +46,9 @@
             <h3 class="logo__text">Богдан Завоёваный</h3>
             <h5 class="logo__subtext">Личный сайт вэб-разработчика</h5>
           </div>
+        </div>
+        <div class="Background">
+          <canvas class="Background-canvas"></canvas>
         </div>
         <svg class="socials-icon__img socials-icon__img-arrow_down">
           <use xlink:href="assets/img/sprite.svg#arrow_down"></use>
@@ -223,4 +225,5 @@
       </div>
     </footer>
   </body>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArk4QgIwFYJW2610eGLU6tdImkGIvICpE&amp;callback=window.initMap"></script>
 </html>
