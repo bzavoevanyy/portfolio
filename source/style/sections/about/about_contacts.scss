@@ -1,12 +1,13 @@
 .contacts {
   height: 100vh;
-  //background: url("../img/map.png") no-repeat;
-  //background-size: cover;
-  //background-position: bottom;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  @include phone {
+    height: 1143px;
+    align-items: flex-start;
+  }
 }
 .contacts-links {
   width:380px;
@@ -14,6 +15,9 @@
   opacity: 0.9;
   margin-top: -186px;
   overflow: hidden;
+  @include phone {
+    margin-top: 0;
+  }
 }
 .contacts-links-title {
   width:auto;
@@ -44,5 +48,4 @@
   left:0;
   right: 0;
   bottom: 0;
-  //z-index: -1;
 }
