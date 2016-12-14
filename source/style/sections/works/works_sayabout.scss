@@ -4,6 +4,9 @@
   background-repeat: no-repeat;
   height: 100%;
   position: relative;
+  @include phone {
+    padding-bottom: 130px;
+  }
 }
 
 .sayabout-wrap .main-title {
@@ -21,6 +24,9 @@
   justify-content: center;
   background-image: linear-gradient(rgba(244, 245, 240, 1), rgba(244, 245, 240, 0));
   margin-bottom: 70px;
+  @include phone {
+    flex-flow: column nowrap;
+  }
 }
 
 .comment-left, .comment-right {
@@ -29,15 +35,23 @@
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  @include phone {
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 5px;
+  }
 }
 
 .comment-left {
   margin-right: 10px;
+  margin-left: 10px;
+  @include phone {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
 }
 
-.comment-left {
-  margin-left: 10px;
-}
 .commets__quote {
   position: absolute;
   top:-30px;
@@ -70,8 +84,8 @@
 }
 
 .feedback {
-  height: 460px;
-  width: 380px;
+  height: 28.75rem;
+  width: 23.75rem;
   margin: 0 auto;
   border-radius: 10px;
   background-color: rgba(218, 219, 214, 0.6);

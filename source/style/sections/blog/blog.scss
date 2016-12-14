@@ -20,6 +20,7 @@
   background-position: center 30px;
   background-size: 20%;
   padding-bottom: 40px;
+  height: auto;
   & .main-title__text {
     color: #fff;
   }
@@ -40,11 +41,17 @@
 .posts-menu {
   width: 30%;
   padding: 50px;
+  @include tablet {
+    display: none;
+  }
 }
 
 .posts {
   width: 70%;
   padding: 50px;
+  @include tablet {
+    width:100%;
+  }
 }
 
 .post {
@@ -105,8 +112,9 @@
 }
 
 .post__picture {
-  max-width: 860px;
+
   margin-bottom: 27px;
+  width:100%;
 }
 
 .footer-top.footer-top-blog {

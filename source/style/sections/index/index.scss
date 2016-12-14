@@ -1,9 +1,12 @@
+.header-wrapper.header-wrapper-index {
+  flex-flow : column wrap;
+}
 .logo-wrapper-index {
   margin: auto;
   background: none;
   height: 395px;
   background-color: rgba(27, 30, 33, 0.5);
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   justify-content: flex-end;
   border-radius: 5px;
   overflow: hidden;
@@ -60,4 +63,11 @@
   height: 60px;
   background: none;
   margin-top: -60px;
+  @include phone {
+    margin-top: -4.7rem;
+    height: auto;
+  }
+  & .copyright {
+    display: inline-block;
+  }
 }

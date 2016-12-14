@@ -9,6 +9,7 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="assets/css/foundation.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/app.css">
     <script src="assets/js/foundation.js" defer></script>
     <script src="assets/js/main.js" defer></script><!--[if lt IE 9]>
@@ -42,7 +43,7 @@
         </div>
         <div class="logo-wrapper">
           <div class="logo">
-            <div class="logo-img"><img class="logo-img__item" src="assets/img/logo.jpg" alt="logo"></div>
+            <div class="logo-img"><img class="logo-img__item" src="assets/img/myphoto.png" alt="logo"></div>
             <h3 class="logo__text">Богдан Завоёваный</h3>
             <h5 class="logo__subtext">Личный сайт вэб-разработчика</h5>
           </div>
@@ -60,109 +61,107 @@
       </div>
     </header>
     <div class="main-wrap">
-      <div class="main">
-        <div class="main-title main-title-about">
-          <div class="main-title__block main-title__block-about">
+      <div class="main main-about">
+        <div class="main-content main-content-about">
+          <div class="content-disc content-disc-about">
             <h1 class="main-title__text">ОБО МНЕ</h1>
             <svg class="underline">
               <use xlink:href="assets/img/sprite.svg#line"></use>
-            </svg>
-          </div>
-          <div class="main-title__block main-title__subblock">
-            <h3 class="main-title__text">ЧЕМ Я МОГУ БЫТЬ <br> ВАМ ПОЛЕЗЕН</h3>
-            <svg class="underline">
-              <use xlink:href="assets/img/sprite.svg#line"></use>
-            </svg>
-          </div>
-        </div>
-        <div class="main-content">
-          <div class="content-disc content-disc-about"><img class="content-disc__photo" src="assets/img/myphoto.png" alt="my photo">
+            </svg><img class="content-disc__photo" src="assets/img/myphoto.png" alt="my photo">
             <h5 class="content-disc__title">Кто я</h5>
             <svg class="underline underline-desc">
               <use xlink:href="assets/img/sprite.svg#line"></use>
             </svg>
-            <p class="content-disc__textabout">
-              Я веб разработчик из Сургута. Мне 33 года. 
-              Я занимаюсь разработкой современных сайтов и приложений.
-              Мне нравится делать интересные и современные проекты.
-            </p><br>
-            <p class="content-disc__textabout">
-              Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
-              Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
-            </p>
+            <div class="text-about-wrap">
+              <p class="content-disc__textabout">
+                Я веб разработчик из Сургута. Мне 33 года. 
+                Я занимаюсь разработкой современных сайтов и приложений.
+                Мне нравится делать интересные и современные проекты.
+              </p><br>
+              <p class="content-disc__textabout">
+                Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+                Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+              </p>
+            </div>
           </div>
           <div class="content-view content-view-about">
+            <h3 class="main-title__text">ЧЕМ Я МОГУ БЫТЬ <br> ВАМ ПОЛЕЗЕН</h3>
+            <svg class="underline">
+              <use xlink:href="assets/img/sprite.svg#line"></use>
+            </svg>
             <p class="content-view__subtitle">
               Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend.
               Но давайте по порядку.
             </p>
-            <div class="skills">
-              <h5 class="skills__title">Frontend</h5>
-              <div class="skill-wrap">
-                <svg class="skill__level">
-                  <circle class="skills__maincircle" r="47" cx="57" cy="57"></circle>
-                  <circle class="skills__fillcircle" r="47" cx="57" cy="57"></circle>
-                </svg><span class="skills__text">HTML5</span>
+            <div class="skills-wrap">
+              <div class="skills">
+                <h5 class="skills__title">Frontend</h5>
+                <div class="skill-wrap">
+                  <svg class="skill__level">
+                    <circle class="skills__maincircle" r="47" cx="57" cy="57"></circle>
+                    <circle class="skills__fillcircle" r="47" cx="57" cy="57"></circle>
+                  </svg><span class="skills__text">HTML5</span>
+                </div>
+                <div class="skill-wrap">
+                  <svg class="skill__level">
+                    <circle class="skills__maincircle" r="47" cx="57" cy="57"></circle>
+                    <circle class="skills__fillcircle" r="47" cx="57" cy="57"></circle>
+                  </svg><span class="skills__text">CSS3</span>
+                </div>
+                <div class="skill-wrap">
+                  <svg class="skill__level">
+                    <circle class="skills__maincircle" r="47" cx="57" cy="57"></circle>
+                    <circle class="skills__fillcircle" r="47" cx="57" cy="57"></circle>
+                  </svg><span class="skills__text">JavaScript & JQuery</span>
+                </div>
               </div>
-              <div class="skill-wrap">
-                <svg class="skill__level">
-                  <circle class="skills__maincircle" r="47" cx="57" cy="57"></circle>
-                  <circle class="skills__fillcircle" r="47" cx="57" cy="57"></circle>
-                </svg><span class="skills__text">CSS3</span>
+              <div class="skills">
+                <h5 class="skills__title">Backend</h5>
+                <div class="skill-wrap">
+                  <svg class="skill__level">
+                    <circle class="skills__maincircle" r="47" cx="57" cy="57"></circle>
+                    <circle class="skills__fillcircle" r="47" cx="57" cy="57"></circle>
+                  </svg><span class="skills__text">PHP</span>
+                </div>
+                <div class="skill-wrap">
+                  <svg class="skill__level">
+                    <circle class="skills__maincircle" r="47" cx="57" cy="57"></circle>
+                    <circle class="skills__fillcircle" r="47" cx="57" cy="57"></circle>
+                  </svg><span class="skills__text">MySql</span>
+                </div>
+                <div class="skill-wrap">
+                  <svg class="skill__level">
+                    <circle class="skills__maincircle" r="47" cx="57" cy="57"></circle>
+                    <circle class="skills__fillcircle" r="47" cx="57" cy="57"></circle>
+                  </svg><span class="skills__text">Nodejs & npm</span>
+                </div>
+                <div class="skill-wrap">
+                  <svg class="skill__level">
+                    <circle class="skills__maincircle" r="47" cx="57" cy="57"></circle>
+                    <circle class="skills__fillcircle" r="47" cx="57" cy="57"></circle>
+                  </svg><span class="skills__text">Laravel</span>
+                </div>
               </div>
-              <div class="skill-wrap">
-                <svg class="skill__level">
-                  <circle class="skills__maincircle" r="47" cx="57" cy="57"></circle>
-                  <circle class="skills__fillcircle" r="47" cx="57" cy="57"></circle>
-                </svg><span class="skills__text">JavaScript & JQuery</span>
-              </div>
-            </div>
-            <div class="skills">
-              <h5 class="skills__title">Backend</h5>
-              <div class="skill-wrap">
-                <svg class="skill__level">
-                  <circle class="skills__maincircle" r="47" cx="57" cy="57"></circle>
-                  <circle class="skills__fillcircle" r="47" cx="57" cy="57"></circle>
-                </svg><span class="skills__text">PHP</span>
-              </div>
-              <div class="skill-wrap">
-                <svg class="skill__level">
-                  <circle class="skills__maincircle" r="47" cx="57" cy="57"></circle>
-                  <circle class="skills__fillcircle" r="47" cx="57" cy="57"></circle>
-                </svg><span class="skills__text">MySql</span>
-              </div>
-              <div class="skill-wrap">
-                <svg class="skill__level">
-                  <circle class="skills__maincircle" r="47" cx="57" cy="57"></circle>
-                  <circle class="skills__fillcircle" r="47" cx="57" cy="57"></circle>
-                </svg><span class="skills__text">Nodejs & npm</span>
-              </div>
-              <div class="skill-wrap">
-                <svg class="skill__level">
-                  <circle class="skills__maincircle" r="47" cx="57" cy="57"></circle>
-                  <circle class="skills__fillcircle" r="47" cx="57" cy="57"></circle>
-                </svg><span class="skills__text">Laravel</span>
-              </div>
-            </div>
-            <div class="skills">
-              <h5 class="skills__title">Workflow</h5>
-              <div class="skill-wrap">
-                <svg class="skill__level">
-                  <circle class="skills__maincircle" r="47" cx="57" cy="57"></circle>
-                  <circle class="skills__fillcircle" r="47" cx="57" cy="57"></circle>
-                </svg><span class="skills__text">Git</span>
-              </div>
-              <div class="skill-wrap">
-                <svg class="skill__level">
-                  <circle class="skills__maincircle" r="47" cx="57" cy="57"></circle>
-                  <circle class="skills__fillcircle" r="47" cx="57" cy="57"></circle>
-                </svg><span class="skills__text">Gulp</span>
-              </div>
-              <div class="skill-wrap">
-                <svg class="skill__level">
-                  <circle class="skills__maincircle" r="47" cx="57" cy="57"></circle>
-                  <circle class="skills__fillcircle" r="47" cx="57" cy="57"></circle>
-                </svg><span class="skills__text">Webpack</span>
+              <div class="skills">
+                <h5 class="skills__title">Workflow</h5>
+                <div class="skill-wrap">
+                  <svg class="skill__level">
+                    <circle class="skills__maincircle" r="47" cx="57" cy="57"></circle>
+                    <circle class="skills__fillcircle" r="47" cx="57" cy="57"></circle>
+                  </svg><span class="skills__text">Git</span>
+                </div>
+                <div class="skill-wrap">
+                  <svg class="skill__level">
+                    <circle class="skills__maincircle" r="47" cx="57" cy="57"></circle>
+                    <circle class="skills__fillcircle" r="47" cx="57" cy="57"></circle>
+                  </svg><span class="skills__text">Gulp</span>
+                </div>
+                <div class="skill-wrap">
+                  <svg class="skill__level">
+                    <circle class="skills__maincircle" r="47" cx="57" cy="57"></circle>
+                    <circle class="skills__fillcircle" r="47" cx="57" cy="57"></circle>
+                  </svg><span class="skills__text">Webpack</span>
+                </div>
               </div>
             </div>
           </div>
@@ -220,10 +219,11 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p class="copyright">© Богдан Завоёваный | Создано с любовью в LoftSchool | 2016</p>
+          <p class="copyright">© Богдан Завоёваный</p>
+          <p class="copyright">Создано с любовью в LoftSchool | 2016</p>
         </div>
       </div>
     </footer>
   </body>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArk4QgIwFYJW2610eGLU6tdImkGIvICpE&amp;callback=window.initMap"></script>
 </html>
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArk4QgIwFYJW2610eGLU6tdImkGIvICpE&amp;callback=window.initMap"></script>

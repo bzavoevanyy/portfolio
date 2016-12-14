@@ -24,6 +24,9 @@
   background: url("../img/works_header.svg") no-repeat;
   background-position: center;
   text-align: center;
+  @include phone {
+    background-size: 100%;
+  }
 }
 
 .underline {
@@ -47,8 +50,13 @@
 
 .main-content {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  height: 100vh;
+  min-height: 650px;
+  @include tablet {
+    flex-flow: column nowrap;
+  }
 }
 
 .content-disc {
@@ -57,11 +65,12 @@
   justify-content: center;
   align-items: center;
   width: 50%;
+  height: 100%;
   box-sizing: border-box;
-  padding-left: 125px;
-  padding-right: 125px;
   background-color: #ebefe2;
-
+  @include tablet {
+    width: 100%;
+  }
 }
 
 .content-disc__title {
@@ -71,6 +80,10 @@
   text-align: center;
   margin-bottom: 20px;
   font-weight: normal;
+  @include tablet {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
 }
 
 .content-disc__skills {
@@ -78,6 +91,9 @@
   font-size: 16px;
   color: #6c9c5a;
   margin-bottom: 55px;
+  @include tablet {
+    margin-bottom: 15px;
+  }
 }
 
 .content-disc__linkblock {
@@ -121,24 +137,49 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
+  @include phone {
+    width: 100%;
+  }
 }
 
 .view-focus {
-  height: 525px;
+  width: 50%;
+  height: 70%;
   display: flex;
   background-color: #e1e4d7;
+  @include tablet {
+    height: 45.2%;
+    order: -1;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  @include phone {
+    height: 45.2%;
+    order: -1;
+    width: 100%;
+  }
 }
 
 .view-focus__img {
   max-width: 460px;
   max-height: 310px;
   margin: auto;
+  @include tablet {
+    width: 73%;
+  }
 }
 
 .pre-view {
+  width: 50%;
+  height: 30%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
+  @include tablet {
+    width: 100%;
+  }
 }
 
 .view-left, .view-right {
@@ -151,6 +192,9 @@
   max-width: 280px;
   max-height: 190px;
   margin: auto;
+  @include tablet {
+    max-width: 73%;
+  }
 }
 
 .view-small__fill {
