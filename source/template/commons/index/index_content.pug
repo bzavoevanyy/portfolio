@@ -1,24 +1,55 @@
 header.header.header-index
   .header-wrapper.header-wrapper-index
     .dark-block
-    .logo-wrapper.logo-wrapper-index
-      .logo.logo-index
-        .logo-img
-          img.logo-img__item(src='assets/img/myphoto.png' alt="logo")
-        h3.logo__text.logo__text-index Богдан Завоёваный
-        h5.logo__subtext Личный сайт вэб-разработчика
-        .socials-icons
-          ul.socials-icons__list
-            - var $icons = ['vk', 'github', 'linkedin']
-            each $item in $icons
-              li.socials-icons__item
-                a.socials-icon__link(href='#')
-                  svg.socials-icon__img.socials-icon__img-index
-                    use(xlink:href="assets/img/sprite.svg#" + $item)
-      .menu-buttons
-        a(href="works.html").menu__button Мои работы
-        a(href="about.html").menu__button Обо мне
-        a(href="blog.html").menu__button Блог
+    a(href="#").button-login#login Авторизоваться
+    .flip-container
+      .flipper
+        .logo-wrapper.logo-wrapper-index.front
+          .logo.logo-index
+            .logo-img
+              img.logo-img__item(src='assets/img/myphoto.png' alt="logo")
+            h3.logo__text.logo__text-index Богдан Завоёваный
+            h5.logo__subtext Личный сайт вэб-разработчика
+            .socials-icons
+              ul.socials-icons__list
+                - var $icons = ['vk', 'github', 'linkedin']
+                each $item in $icons
+                  li.socials-icons__item
+                    a.socials-icon__link(href='#')
+                      svg.socials-icon__img.socials-icon__img-index
+                        use(xlink:href="assets/img/sprite.svg#" + $item)
+          .menu-buttons
+            a(href="works.html").menu__button Мои работы
+            a(href="about.html").menu__button Обо мне
+            a(href="blog.html").menu__button Блог
+        .logo-wrapper.logo-wrapper-index.back
+          .logo.logo-index
+            h3.logo__text.logo__text-index.logo__text-index__back АВТОРИЗУЙТЕСЬ
+            svg.underline.underline__index
+              use(xlink:href="assets/img/sprite.svg#line")
+            form.login-form
+              .login-form__block
+                input(placeholder='Логин' type="text" name='login').login-form__input-login
+                i.fa.fa-user.login-form__icon
+              .login-form__block
+                input(placeholder='Пароль' type="password" name='password').login-form__input-login
+                i.fa.fa-key.login-form__icon
+              label.amirobot__checkbox
+                input(type='checkbox' name='robot').amirobot__checkbox_input
+                .amirobot__checkbox_text Я не робот
+              .radio-wrap
+                label.amirobot__radio
+                  input(type='radio' name='robot-radio' value='man' checked='checked').amirobot__radio_input
+                  .amirobot__radio_text
+                    span Да
+                label.amirobot__radio
+                  input(type='radio' name='robot-radio' value='robot').amirobot__radio_input
+                  .amirobot__radio_text
+                    span Не уверен
+          .menu-buttons
+            a(href="#").menu__button#index На главную
+            a(href="#").menu__button#enter Войти
+
   .footer-bottom.footer-bottom-index
     p.copyright © Богдан Завоёваный
     p.copyright Создано с любовью в LoftSchool | 2016

@@ -78,6 +78,7 @@ header {
   background: url("../img/portfolio_header.svg") no-repeat;
   background-position: center center;
   height: 330px;
+
   @include tablet {
     background: none;
   }
