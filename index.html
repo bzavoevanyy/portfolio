@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/app.css">
     <script src="assets/js/foundation.js" defer></script>
-    <script src="assets/js/app.js" defer></script><!--[if lt IE 9]>
+    <script src="assets/js/app.js" defer></script>
+    <script src="assets/js/webgl.js" defer></script><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body>
@@ -25,7 +26,8 @@
       </svg>
     </div>
     <header class="header header-index">
-      <div class="header-wrapper header-wrapper-index">
+      <div class="background-static"></div>
+      <div class="header-wrapper header-wrapper-index" id="header-wrapper">
         <div class="dark-block" id="dark-block"></div><a class="button-login" href="#" id="login">Авторизоваться</a>
         <div class="flip-container">
           <div class="flipper">
@@ -94,7 +96,7 @@
         <p class="copyright">© Богдан Завоёваный</p>
         <p class="copyright">Создано с любовью в LoftSchool | 2016</p>
       </div>
-      <div class="Background" id="header-wrapper">
+      <div class="Background">
         <canvas class="Background-canvas"></canvas>
       </div>
     </header>

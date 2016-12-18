@@ -178,7 +178,7 @@
 	  };
 	  var listener = function listener() {
 	    document.body.addEventListener('click', function (e) {
-	
+	      console.log(e.target);
 	      if (e.target.name === 'robot' || e.target.name === 'robot-radio') {
 	        if (robotTooltip.classList.contains('show')) {
 	          robotTooltip.classList.remove('show');
