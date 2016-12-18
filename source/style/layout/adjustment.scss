@@ -48,3 +48,64 @@ h1, h2, h3, h4, h5, h6, p {
   fill: none;
   stroke-width: 20px;
 }
+.preloader-svg {
+  height: 80px;
+  width: 80px;
+  margin: auto;
+}
+
+.preloader__wave1, .preloader__wave2, .preloader__wave3 {
+
+  stroke-dasharray: 56 40;
+  stroke-dashoffset: 0;
+  animation: wave1 2s linear infinite;
+}
+
+.preloader__wave2 {
+  stroke-dasharray: 56 40;
+  stroke-dashoffset: 16;
+  animation: wave2 2s linear infinite;
+}
+
+.preloader__wave3 {
+  stroke-dasharray: 56 40;
+  stroke-dashoffset: 32;
+  animation: wave3 2s linear infinite;
+}
+
+@keyframes wave1 {
+  to {
+    stroke-dashoffset: -96;
+  }
+}
+
+@keyframes wave2 {
+  to {
+    stroke-dashoffset: -80;
+  }
+}
+
+@keyframes wave3 {
+  to {
+    stroke-dashoffset: -64;
+  }
+}
+.preloader__text {
+  fill: #fff;
+}
+.preloader {
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #4e8839;
+  opacity: 0.8;
+  display: flex;
+  transition: 1s;
+}
+.preloader--close {
+  opacity: 0;
+  z-index: -10;
+}

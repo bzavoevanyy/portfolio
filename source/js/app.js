@@ -1,12 +1,17 @@
 'use strict';
-import {styles} from './gmaps/map_style';
-import initMap from './gmaps/initMap';
-import * as efect from './webgl_paralax/index-water'
-window.initMap = initMap;
-window.styles = styles;
+
 import login from './index/login';
+import preloader from './preloader/preloader';
+
+
 let ready = () => {
+  preloader.init();
   login.init();
 };
 
 document.addEventListener('DOMContentLoaded', ready);
+
+// TODO add main menu
+// TODO add sidebar blog for small screens
+// TODO add slider
+// TODO somethings else :)

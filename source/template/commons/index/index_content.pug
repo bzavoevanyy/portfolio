@@ -1,12 +1,12 @@
 header.header.header-index
   .header-wrapper.header-wrapper-index
-    .dark-block
+    .dark-block#dark-block
     a(href="#").button-login#login Авторизоваться
     .flip-container
       .flipper
         .logo-wrapper.logo-wrapper-index.front
           .logo.logo-index
-            .logo-img
+            .logo-img.logo-img__index
               img.logo-img__item(src='assets/img/myphoto.png' alt="logo")
             h3.logo__text.logo__text-index Богдан Завоёваный
             h5.logo__subtext Личный сайт вэб-разработчика
@@ -31,21 +31,28 @@ header.header.header-index
               .login-form__block
                 input(placeholder='Логин' type="text" name='login').login-form__input-login
                 i.fa.fa-user.login-form__icon
+              .tooltip__login#login-tooltip
+                span Неправильный логин
               .login-form__block
                 input(placeholder='Пароль' type="password" name='password').login-form__input-login
                 i.fa.fa-key.login-form__icon
+              .tooltip__login#password-tooltip
+                span Проверьте пароль
               label.amirobot__checkbox
                 input(type='checkbox' name='robot').amirobot__checkbox_input
                 .amirobot__checkbox_text Я не робот
+              span.notrobot Вы уверены?
               .radio-wrap
                 label.amirobot__radio
-                  input(type='radio' name='robot-radio' value='man' checked='checked').amirobot__radio_input
+                  input(type='radio' name='robot-radio' value='man' ).amirobot__radio_input
                   .amirobot__radio_text
                     span Да
                 label.amirobot__radio
-                  input(type='radio' name='robot-radio' value='robot').amirobot__radio_input
+                  input(type='radio' name='robot-radio' value='robot' checked='checked').amirobot__radio_input
                   .amirobot__radio_text
                     span Не уверен
+              .tooltip__login.tooltip__login--robot#robot-tooltip
+                span Роботам здесь не место
           .menu-buttons
             a(href="#").menu__button#index На главную
             a(href="#").menu__button#enter Войти
@@ -53,5 +60,5 @@ header.header.header-index
   .footer-bottom.footer-bottom-index
     p.copyright © Богдан Завоёваный
     p.copyright Создано с любовью в LoftSchool | 2016
-  .Background
+  .Background#header-wrapper
     canvas.Background-canvas

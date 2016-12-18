@@ -2,10 +2,13 @@ extends ../_template
 
 block variables
   - var title = 'About me'
-
+block scripts
+  script(src='assets/js/gmap.js' defer)
 block content
   include ../commons/about/header_about
   include ../commons/about/about_main
   include ../commons/about/about_contacts
   include ../commons/footer
+block map
+  script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArk4QgIwFYJW2610eGLU6tdImkGIvICpE&callback=window.initMap")
 
