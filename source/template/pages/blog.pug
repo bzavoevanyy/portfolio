@@ -2,7 +2,8 @@ extends ../_template
 
 block variables
   - var title = 'Blog'
-
+block scripts
+  script(src='assets/js/webgl.js' defer)
 block content
   include ../commons/blog/header_blog
   include ../commons/blog/blog_content

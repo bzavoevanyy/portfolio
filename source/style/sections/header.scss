@@ -1,8 +1,6 @@
 header {
   position: relative;
-  background-image: url("../img/water.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+
 }
 
 .header-wrapper {
@@ -20,12 +18,24 @@ header {
   }
 
 }
+.background-static {
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../img/water.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
 .Background {
   position: absolute;
   top:0;
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: -1;
 }
 .dark-block {
   position: absolute;
