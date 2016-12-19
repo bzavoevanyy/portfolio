@@ -1,0 +1,123 @@
+.main-title-about {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.header-traingle__left-about {
+  fill: #ebefe2;
+}
+
+.header-traingle__right-about {
+  fill: #F4F5f0;
+}
+
+.main-title__block-about {
+  background: url("../img/about_header.svg") no-repeat;
+  background-position: center;
+  background-color: #ebefe2;
+}
+
+.main-title__block-about, .main-title__subblock {
+  width: 50%;
+}
+
+.main-title__subblock .main-title__text {
+  color: #556358;
+  font-size: 35px;
+  font-weight: normal;
+  margin-top: 50px;
+}
+
+.main-title__subblock {
+  background: none;
+  background-color: #f4f5f0;
+}
+
+.main-title__subblock .underline {
+  fill: #556358;
+}
+
+.content-disc__photo {
+  max-width: 445px;
+  max-height: 390px;
+  margin-bottom: 40px;
+}
+
+.content-disc__textabout {
+  color: #556358;
+  font-family: RobotoRegular;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.content-disc-about {
+  padding-bottom: 40px;
+}
+
+.content-view-about {
+  background-color: #f4f5f0;
+  box-sizing: border-box;
+  padding: 38px;
+}
+
+.content-view__subtitle {
+  font-family: RobotoRegular;
+  font-size: 16px;
+  line-height: 30px;
+  color: #556358;
+  margin-bottom: 45px;
+}
+
+.skills {
+  margin-bottom: 40px;
+}
+
+.skill-wrap {
+  position: relative;
+  display: inline-block;
+  margin-right: 35px;
+}
+
+.skills__title {
+  font-family: RobotoMedium;
+  font-weight: normal;
+  font-size: 28px;
+  color: #566358;
+  margin-bottom: 18px;
+}
+
+.skill__level {
+  height: 115px;
+  width: 115px;
+  fill: none;
+  stroke-width: 20px;
+
+}
+
+.skills__maincircle {
+  stroke: #dfdcd5;
+  fill: none;
+}
+
+.skills__fillcircle {
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  stroke: #74a163;
+  stroke-dasharray: 230 295;
+}
+
+.skills__text {
+  font-family: RobotoMedium;
+  display: block;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 13px;
+  color: #4e8839;
+  width: 65px;
+  height: 70px;
+  text-align: center;
+}
+

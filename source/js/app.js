@@ -1,7 +1,7 @@
-(function () {
-    'use strict';
+'use strict';
+import {styles} from './gmaps/map_style';
+import initMap from './gmaps/initMap';
+import * as efect from './webgl_paralax/index-water'
+window.initMap = initMap;
+window.styles = styles;
 
-    setTimeout(function () {
-        document.querySelector('.greating_picture').classList.add('m--show');
-    }, 1000);
-})();

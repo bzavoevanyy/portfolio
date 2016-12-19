@@ -1,5 +1,23 @@
-body {
-  margin: 0;
-}
 
-@import 'common/greating';
+
+@import 'layout/adjustment';
+
+@import 'sections/header';
+
+@import "sections/index/index";
+
+@import 'sections/works/works_main';
+
+@import 'sections/works/works_sayabout';
+
+@import "sections/about/about_main";
+
+@import "sections/about/about_contacts";
+
+@import "sections/blog/blog";
+
+@import 'sections/footer';
+
+@import 'layout/fonts';
+
+@import "FontAwesome/font-awesome";

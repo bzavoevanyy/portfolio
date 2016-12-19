@@ -1,0 +1,29 @@
+header.header
+  .header-wrapper
+    .dark-block
+    .top-container
+      .socials-icons
+        ul.socials-icons__list
+          - var $icons = ['vk', 'github', 'linkedin']
+          each $item in $icons
+            li.socials-icons__item
+              a.socials-icon__link(href='#')
+                svg.socials-icon__img
+                  use(xlink:href="assets/img/sprite.svg#" + $item)
+      .mainmenu
+        a(href='#')
+          svg.socials-icon__img
+            use(xlink:href="assets/img/sprite.svg#hamburger")
+    .logo-wrapper
+      .logo
+        .logo-img
+          img.logo-img__item(src='assets/img/logo.jpg' alt="logo")
+        h3.logo__text Богдан Завоёваный
+        h5.logo__subtext Личный сайт вэб-разработчика
+    .Background
+      canvas.Background-canvas
+    svg.socials-icon__img.socials-icon__img-arrow_down
+      use(xlink:href="assets/img/sprite.svg#arrow_down")
+    block trianglies
+
+
