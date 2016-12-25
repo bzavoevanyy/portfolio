@@ -145,8 +145,9 @@
 .view-focus {
   width: 50%;
   height: 70%;
-  display: flex;
+  //display: flex;
   background-color: #e1e4d7;
+  position: relative;
   @include tablet {
     height: 45.2%;
     order: -1;
@@ -165,6 +166,12 @@
 .view-focus__img {
   max-width: 460px;
   max-height: 310px;
+  //margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   margin: auto;
   @include tablet {
     width: 73%;
@@ -184,13 +191,19 @@
 
 .view-left, .view-right {
   width: 50%;
-  display: flex;
   position: relative;
+  overflow: hidden;
+
 }
 
 .view-small__img {
   max-width: 280px;
   max-height: 190px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   margin: auto;
   @include tablet {
     max-width: 73%;
@@ -204,6 +217,7 @@
   background-color: #566358;
   opacity: 0.5;
   display: flex;
+  z-index: 10;
 }
 
 .view-small__fill-dark {
@@ -221,4 +235,41 @@
   fill: #fff;
   margin: auto;
   cursor: pointer;
+  z-index: 10;
+}
+
+.view-focus {
+  & .view-focus__img2, .view-focus__img3, .view-focus__img4 {
+    opacity: 0;
+  }
+}
+.view-small__block-left {
+
+}
+.view-small__img1, .view-small__img2, .view-small__img3, .view-small__img4 {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: top 0.5s;
+
+}
+
+.view-left {
+  & .view-small__img1, .view-small__img2, .view-small__img3 {
+    top: -100%;
+  }
+}
+
+.view-focus__img1, .view-focus__img2, .view-focus__img3, .view-focus__img4 {
+  transition: opacity 0.4s;
+
+}
+
+.view-right {
+  & .view-small__img1, .view-small__img3, .view-small__img4 {
+    top: 100%;
+  }
 }

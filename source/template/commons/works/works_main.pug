@@ -1,4 +1,4 @@
-.main-wrap
+.main-wrap.main-wrap__works
   .main
     .main-title
       .main-title__block
@@ -16,17 +16,34 @@
             svg.content-disc__icon
               use(xlink:href="assets/img/sprite.svg#link")
             p.content-disc__text(href="#") Посмотреть сайт
-      //.content-view
       .view-focus
-        img.view-focus__img(src="assets/img/loftschool.png" alt="project_img")
+        img.view-focus__img.view-focus__img1(src="assets/img/loftschool.png" alt="project_img" data-title="Сайт школы онлайн образования" data-skills="HTML, CSS, JavaScript" data-link="#1")
+        img.view-focus__img.view-focus__img2(src="assets/img/infinity.jpg" alt="project_img" data-title="Сайт космической лаборатории" data-skills="React JS, Node JS" data-link="#2")
+        img.view-focus__img.view-focus__img3(src="assets/img/ocean.jpeg" alt="project_img" data-title="Сайт туристического агенства" data-skills="HTML, CSS, JavaScript Wordpress" data-link="#3")
+        img.view-focus__img.view-focus__img4(src="assets/img/relax.jpg" alt="project_img" data-title="Сайт гостиницы" data-skills="HTML, CSS, JavaScript" data-link="#4")
+
       .pre-view
         .view-left
           .view-small__fill
           svg.view-left__arrow
-            use(xlink:href="assets/img/sprite.svg#portf_arrow_down")
-          img.view-small__img(src="assets/img/loftschool.png" alt="project_img")
+            use(xlink:href="assets/img/sprite.svg#portf_arrow_down")#left_arrow
+          .view-small__block-left.view-small__img1
+            img.view-small__img(src="assets/img/loftschool.png" alt="project_img")
+          .view-small__block-left.view-small__img2
+            img.view-small__img(src="assets/img/infinity.jpg" alt="project_img")
+          .view-small__block-left.view-small__img3
+            img.view-small__img(src="assets/img/ocean.jpeg" alt="project_img")
+          .view-small__block-left.view-small__img4
+            img.view-small__img(src="assets/img/relax.jpg" alt="project_img")
         .view-right
           .view-small__fill.view-small__fill-dark
           svg.view-left__arrow
-            use(xlink:href="assets/img/sprite.svg#portf_arrow_up")
-          img.view-small__img(src="assets/img/loftschool.png" alt="project_img")
+            use(xlink:href="assets/img/sprite.svg#portf_arrow_up")#right_arrow
+          .view-small__block-right.view-small__img1
+            img.view-small__img(src="assets/img/loftschool.png" alt="project_img")
+          .view-small__block-right.view-small__img2
+            img.view-small__img(src="assets/img/infinity.jpg" alt="project_img")
+          .view-small__block-right.view-small__img3
+            img.view-small__img(src="assets/img/ocean.jpeg" alt="project_img")
+          .view-small__block-right.view-small__img4
+            img.view-small__img(src="assets/img/relax.jpg" alt="project_img")

@@ -90,47 +90,55 @@ let login = (() => {
     }
   };
   let listener = () => {
-    document.body.addEventListener('click', (e) => {
-      console.log(e.target);
-      if (e.target.name === 'robot' || e.target.name === 'robot-radio') {
-        if (robotTooltip.classList.contains('show')) {
-          robotTooltip.classList.remove('show');
+
+    let bodyTarget = document.querySelector('.header-index');
+
+    if (bodyTarget) {
+     bodyTarget.addEventListener('click', (e) => {
+
+        if (e.target.name === 'robot' || e.target.name === 'robot-radio') {
+          if (robotTooltip.classList.contains('show')) {
+            robotTooltip.classList.remove('show');
+          }
         }
-      }
 
-      switch (e.target.id) {
-        case 'login' :
-          e.preventDefault();
-          runFlip();
-          break;
-        case 'index' :
-          e.preventDefault();
-          runFlip();
-          break;
-        case 'enter' :
-          e.preventDefault();
-          sendForm();
-          break;
-        case 'header-wrapper' :
-          runFlip(true);
-          break;
-        case 'dark-block' :
-          runFlip(true);
-          break;
-      }
-    });
+        switch (e.target.id) {
+          case 'login' :
+            e.preventDefault();
+            runFlip();
+            break;
+          case 'index' :
+            e.preventDefault();
+            runFlip();
+            break;
+          case 'enter' :
+            e.preventDefault();
+            sendForm();
+            break;
+          case 'header-wrapper' :
+            runFlip(true);
+            break;
+          case 'dark-block' :
+            runFlip(true);
+            break;
+        }
+      });
+    }
 
-    document.body.addEventListener('keyup', (e) => {
+    if (document.querySelector('.header-index')) {
+      bodyTarget.addEventListener('keyup', (e) => {
 
-      switch (e.target.name) {
-        case 'login' :
-          checkInputs(e.target);
-          break;
-        case 'password' :
-          checkInputs(e.target);
-          break;
-      }
-    })
+        switch (e.target.name) {
+          case 'login' :
+            checkInputs(e.target);
+            break;
+          case 'password' :
+            checkInputs(e.target);
+            break;
+        }
+      })
+    }
+
   };
 
   return {

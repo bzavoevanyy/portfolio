@@ -1,0 +1,13 @@
+.main-menu
+  i(class="fa fa-times fa-3x" aria-hidden="true").close-icon#hide-menu
+  .back-wrap
+    .main-menu__left
+    .main-menu__right
+  ul.main-menu__list
+    - var $items = {'МОИ РАБОТЫ' : 'works', 'ОБО МНЕ' : 'about', 'БЛОГ' : 'blog', 'АВТОРИЗАЦИЯ' : 'index'}
+    each $key, $value in $items
+      li.main-menu__item
+        a.main-menu__link(href = $key + '.html' class='main-menu__link--' + $key)= $value
+          svg.underline.underline__mainmenu
+            use(xlink:href="assets/img/sprite.svg#line")
+

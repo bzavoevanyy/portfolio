@@ -1,4 +1,3 @@
-
 header.header
   .background-static
   .header-wrapper
@@ -13,9 +12,7 @@ header.header
                 svg.socials-icon__img
                   use(xlink:href="assets/img/sprite.svg#" + $item)
       .mainmenu
-        a(href='#')
-          svg.socials-icon__img
-            use(xlink:href="assets/img/sprite.svg#hamburger")
+        i(class="fa fa-bars fa-3x" aria-hidden="true").socials-icon__img#show-menu
     .logo-wrapper
       .logo
         .logo-img
@@ -25,7 +22,7 @@ header.header
     .Background
       canvas.Background-canvas
     svg.socials-icon__img.socials-icon__img-arrow_down
-      use(xlink:href="assets/img/sprite.svg#arrow_down")
+      use(xlink:href="assets/img/sprite.svg#arrow_down")#arrow_down
     block trianglies
 
 

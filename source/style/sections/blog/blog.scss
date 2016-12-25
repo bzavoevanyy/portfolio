@@ -36,6 +36,7 @@
   justify-content: center;
   background-color: #F8F9F5;
   margin-bottom: 186px;
+  height: 100vh;
 }
 
 .posts-menu {
@@ -49,6 +50,8 @@
 .posts {
   width: 70%;
   padding: 50px;
+  overflow: scroll;
+  position: relative;
   @include tablet {
     width:100%;
   }

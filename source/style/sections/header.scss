@@ -74,6 +74,7 @@ header {
   width: 35px;
   height: 20px;
   fill: #fff;
+  z-index: 200;
   &:hover {
     fill: #4e8839;
   }
@@ -82,6 +83,11 @@ header {
 .mainmenu .socials-icon__img {
   width: 45px;
   height: 45px;
+  color: #fff;
+  cursor: pointer;
+  &:hover {
+    color:#4e8839;
+  }
 }
 
 .logo-wrapper {
