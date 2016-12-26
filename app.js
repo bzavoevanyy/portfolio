@@ -24,7 +24,7 @@ passport.deserializeUser(function (id, done) {
   done(null, user);
 });
 passport.use('localUser', new LocalStrategy((username, password, done) => {
-  // console.log(username);
+
   if (username === user.username && password === user.password) {
     return done(null, user);
   } else {
@@ -48,7 +48,7 @@ app.use(session({
   key: 'keys',
   cookie: {
     path: '/',
-    httpOnly: true,
+    httpOnly: false,
     maxAge: null
   },
   saveUninitialized: false,
@@ -60,7 +60,10 @@ app.use(passport.session());
 
 app.use('/admin', admin);
 
-
+app.post('/del', (req, res) => {
+  req.session.destroy();
+  res.json({status: 'Сессия удалена'});
+});
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

@@ -1,0 +1,50 @@
+h3.admin-main__title Страница "Обо мне"
+from.admin-main__form(method="GET" action="/admin/skills")
+    .form-block-wrapper
+        .form-block
+            h3.form-block__title Fronend
+            label.form-block__label
+                span.input-text HTML
+                input(type="number" min="1" max="100").skills-level(name='html')#html
+                span.input-text %
+            label.form-block__label
+                span.input-text CSS
+                input(type="number" min="1" max="100").skills-level(name='css')#css
+                span.input-text %
+            label.form-block__label
+                span.input-text Javascript
+                input(type="number" min="1" max="100").skills-level(name='javascript')#javascript
+                span.input-text %
+        .form-block
+            h3.form-block__title Backend
+            label.form-block__label
+                span.input-text PHP
+                input(type="number" min="1" max="100").skills-level(name='php')#php
+                span.input-text %
+            label.form-block__label
+                span.input-text Mysql
+                input(type="number" min="1" max="100").skills-level(name='mysql')#mysql
+                span.input-text %
+            label.form-block__label
+                span.input-text Nodejs
+                input(type="number" min="1" max="100").skills-level(name='nodejs')#nodejs
+                span.input-text %
+            label.form-block__label
+                span.input-text Laravel
+                input(type="number" min="1" max="100").skills-level(name='laravel')#laravel
+                span.input-text %
+        .form-block
+            h3.form-block__title Workflow
+            label.form-block__label
+                span.input-text GIT
+                input(type="number" min="1" max="100").skills-level(name='git')#git
+                span.input-text %
+            label.form-block__label
+                span.input-text Gulp
+                input(type="number" min="1" max="100").skills-level(name='gulp')#gulp
+                span.input-text %
+            label.form-block__label
+                span.input-text Webpack
+                input(type="number" min="1" max="100").skills-level(name='webpack')#webpack
+                span.input-text %
+    input.form-submit(type="submit" value="Сохранить")#send-skills

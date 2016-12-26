@@ -26,7 +26,7 @@ let preloader = (() => {
       document.getElementById('preloader_text').innerHTML = Math.round(percent) + '%';
       if (Math.round(percent) >= 100) {
         preloader.classList.add('preloader--close');
-        setTimeout(()=>{
+        setTimeout(() => {
           preloader.style.display = 'none';
         }, 1000);
       }
@@ -38,7 +38,7 @@ let preloader = (() => {
         setPersent();
       });
       fakeImg.addEventListener('error', () => {
-        fakeImg.removeEventListener('load', ()=> {
+        fakeImg.removeEventListener('load', () => {
         });
         setPersent()
       });
@@ -46,7 +46,9 @@ let preloader = (() => {
   };
   return {
     init: () => {
-      loadImg();
+      if (!document.querySelector('.admin-container')) {
+        loadImg();
+      }
     }
   }
 })();

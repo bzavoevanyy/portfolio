@@ -4,6 +4,7 @@ let router = express.Router();
 let passport = require('passport');
 let mongoose = require('mongoose');
 let Skills = require('../../models/skills');
+let Post = require('../../models/post');
 
 function isLoggedIn(req, res, next) {
   if (req.isAuthenticated()) {
@@ -34,6 +35,13 @@ router
     })(req, res, next);
 
   })
+  .get('/skills', isLoggedIn, (req,res,next) => {
+    res.render('_admin_skills');
+    // next(err);
+  })
+  .get('/blog', isLoggedIn, (req,res,err) => {
+    res.render('_admin_blog')
+  })
   .post('/skills/get', (req, res, next) => {
     Skills.find().then((data) => {
       res.send(data);
@@ -63,6 +71,13 @@ router
         })
       }
     });
+  })
+  .post('blog/post', isLoggedIn, (req,res,next) => {
+    let post = new Post(req.body);
+    post.save((err) => {
+      if (err) next(err);
+      res.json({"status": "200"});
+    })
   });
 
 module.exports = router;
