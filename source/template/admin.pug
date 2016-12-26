@@ -1,0 +1,78 @@
+html
+    head
+        meta(charset="utf-8")
+        title #{title}
+        meta(content="" name="author")
+        meta(content="" name="description")
+        meta(content="" name="keywords")
+        meta(content="width=device-width, initial-scale=1" name="viewport")
+        meta(content="ie=edge" http-equiv="x-ua-compatible")
+
+        //- favicon block start
+        //- favicon block end
+
+        link(rel='stylesheet' href='assets/css/foundation.css')
+        link(rel='stylesheet' href='assets/css/layout.css')
+        link(rel='stylesheet' href='assets/css/app.css')
+        script(src='assets/js/foundation.js' defer)
+        script(src='assets/js/app.js' defer)
+        block scripts
+        <!--[if lt IE 9]>
+        script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+        <![endif]-->
+
+    body
+        .admin-container
+            .admin-top
+                h1.admin-top__title Панель администрирования
+                a.admin-top__linkback(href='index.html') Вернуться назад
+            .admin-tabs
+            .admin-main
+                from.admin-main__form(method="GET" action="/admin/skills")
+                    .form-block
+                        h3.form-block__title Fronend
+                        label
+                            span.input-text HTML
+                            input(type="number" min="1" max="100").skills-level(name='html')
+                            span.input-text %
+                        label
+                            span.input-text CSS
+                            input(type="number" min="1" max="100").skills-level(name='css')
+                            span.input-text %
+                        label
+                            span.input-text Javascript
+                            input(type="number" min="1" max="100").skills-level(name='javascript')
+                            span.input-text %
+                    .form-block
+                        h3.form-block__title Backend
+                        label
+                            span.input-text PHP
+                            input(type="number" min="1" max="100").skills-level(name='php')
+                            span.input-text %
+                        label
+                            span.input-text Mysql
+                            input(type="number" min="1" max="100").skills-level(name='mysql')
+                            span.input-text %
+                        label
+                            span.input-text Nodejs
+                            input(type="number" min="1" max="100").skills-level(name='nodejs')
+                            span.input-text %
+                        label
+                            span.input-text Laravel
+                            input(type="number" min="1" max="100").skills-level(name='laravel')
+                            span.input-text %
+                    .form-block
+                        h3.form-block__title Workflow
+                        label
+                            span.input-text GIT
+                            input(type="number" min="1" max="100").skills-level(name='git')
+                            span.input-text %
+                        label
+                            span.input-text Gulp
+                            input(type="number" min="1" max="100").skills-level(name='gulp')
+                            span.input-text %
+                        label
+                            span.input-text Webpack
+                            input(type="number" min="1" max="100").skills-level(name='webpack')
+                            span.input-text %
+                    input.form-submit(type="submit" value="Сохранить")#send-skills

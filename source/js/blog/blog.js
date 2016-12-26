@@ -1,5 +1,6 @@
 let blog = (() => {
 
+
   let changeActivePost = (target) => {
     let posts = document.querySelector('.posts');
     let activeLink = document.querySelector('.active');
@@ -32,6 +33,7 @@ let blog = (() => {
   return {
     init: () => {
       listener();
+
     }
   }
 })();

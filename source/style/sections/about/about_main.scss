@@ -162,18 +162,8 @@
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
   stroke: #74a163;
-  //stroke-dasharray: 230 295;
-  //transition: all 1s;
-  animation: fillcircle 1s;
-  animation-fill-mode: forwards;
-}
-@keyframes fillcircle {
-  from {
-    stroke-dasharray: 0 295;
-  }
-  to {
-    stroke-dasharray: 230 295;
-  }
+  stroke-dasharray: 0 295;
+  transition: all 1s;
 }
 
 .skills__text {

@@ -19,52 +19,78 @@ let login = (() => {
     }
   };
   let sendForm = () => {
-      class Form {
-        constructor() {
-          this.login = document.getElementsByName('login')[0].value;
-          this.password = document.getElementsByName('password')[0].value;
-          this.robot = document.getElementsByName('robot')[0].checked;
-          let robotRadio = document.getElementsByName('robot-radio');
+    class Form {
+      constructor() {
+        this.username = document.getElementsByName('username')[0].value;
+        this.password = document.getElementsByName('password')[0].value;
+        this.robot = document.getElementsByName('robot')[0].checked;
+        let robotRadio = document.getElementsByName('robot-radio');
 
-          if (robotRadio[0].checked) {
-            this.robotRadio = robotRadio[0].value;
-          } else {
-            this.robotRadio = robotRadio[1].value
-          }
-        }
-
-        checkForm() {
-
-
-          if (!this.robot) { // Проверяем чекбокс "Я не робот"
-            robotTooltip.classList.add('show');
-            return false
-          }
-          if (this.robotRadio === 'robot') { // Проверяем radioButton "Я не робот"
-            robotTooltip.classList.add('show');
-            return false;
-          }
-          if (!loginPatttern.test(this.login)) { // Проверяем поле "Логин"
-            loginTooltip.classList.add('show');
-            return false;
-          }
-          if (!passwordPattern.test(this.password)) { // Проверяем поле "Пароль"
-            passwordTooltip.classList.add('show');
-            return false;
-          }
-          return true;
+        if (robotRadio[0].checked) {
+          this.robotRadio = robotRadio[0].value;
+        } else {
+          this.robotRadio = robotRadio[1].value
         }
       }
 
-      let data = new Form();
-    data.checkForm();
-    // TODO send object by AJAX
+      checkForm() {
+
+
+        if (!this.robot) { // Проверяем чекбокс "Я не робот"
+          robotTooltip.classList.add('show');
+          return false
+        }
+        if (this.robotRadio === 'robot') { // Проверяем radioButton "Я не робот"
+          robotTooltip.classList.add('show');
+          return false;
+        }
+        if (!loginPatttern.test(this.username)) { // Проверяем поле "Логин"
+          loginTooltip.classList.add('show');
+          return false;
+        }
+        if (!passwordPattern.test(this.password)) { // Проверяем поле "Пароль"
+          passwordTooltip.classList.add('show');
+          return false;
+        }
+        return true;
+      }
     }
-    ;
+
+    let data = new Form();
+    if (data.checkForm()) {
+      let req = {};
+      req.username = data.username;
+      req.password = data.password;
+      let xhr = new XMLHttpRequest();
+      xhr.open('POST', '/admin');
+      xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+      new Promise(function (resolve, reject) {
+        xhr.send(JSON.stringify(req));
+        xhr.onload = function() {
+          if (this.status >= 200 && this.status <= 300) {
+            resolve(this.response);
+          } else {
+            reject(this.status);
+          }
+        }
+      }).then(function (response) {
+
+        let data = JSON.parse(response);
+        if (data.redirect && typeof data.redirect == 'string') {
+          window.location = data.redirect;
+        }
+        if (data.error && typeof data.error == 'string') {
+          robotTooltip.classList.add('show');
+        }
+      }).catch(function(response) {
+
+      })
+    }
+  };
   let checkInputs = (target) => {
 
 
-    if (target.name === 'login') {
+    if (target.name === 'username') {
       if (loginPatttern.test(target.value)) {
         target.parentNode.classList.remove('error');
         target.parentNode.classList.add('noterror');
@@ -94,7 +120,7 @@ let login = (() => {
     let bodyTarget = document.querySelector('.header-index');
 
     if (bodyTarget) {
-     bodyTarget.addEventListener('click', (e) => {
+      bodyTarget.addEventListener('click', (e) => {
 
         if (e.target.name === 'robot' || e.target.name === 'robot-radio') {
           if (robotTooltip.classList.contains('show')) {
@@ -129,7 +155,7 @@ let login = (() => {
       bodyTarget.addEventListener('keyup', (e) => {
 
         switch (e.target.name) {
-          case 'login' :
+          case 'username' :
             checkInputs(e.target);
             break;
           case 'password' :
