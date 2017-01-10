@@ -2,65 +2,75 @@
 let express = require('express');
 let path = require('path');
 let logger = require('morgan');
-let cookieParser = require('cookie-parser');
+let cookieParser = require('cookie-parser'); // Для парсинга кук
 let bodyParser = require('body-parser');
-let passport = require('passport');
-let LocalStrategy = require('passport-local').Strategy;
+let passport = require('passport'); // сам passport js
+let LocalStrategy = require('passport-local').Strategy; // Локальная стратегия, пользователь хранится в базе
 let admin = require('./server/routes/admin');
 let mongoose = require('mongoose');
-let session = require('express-session');
-let MongoStore = require('connect-mongo')(session);
+let session = require('express-session'); // Для работы сессий
+let MongoStore = require('connect-mongo')(session); // Хранение сессий в MongoDb
+let User = require('./models/user');
 let app = express();
 mongoose.connect('mongodb://localhost/test2');
-let user = {
-  username: 'user',
-  password: 'password',
-  id: 1
-};
+
+// Следующие два метода подготовки данных при чтении и записи в MongoStore
 passport.serializeUser(function (user, done) {
-  done(null, user.id);
+  done(null, user._id);
 });
 passport.deserializeUser(function (id, done) {
-  done(null, user);
+  User.findById(id).then((user) => {
+    done(null, user);
+  })
 });
+
+// Сама локальная стратегия - ищет пользователя в базе и проверяет его пароль (пароль не шифруется)
 passport.use('localUser', new LocalStrategy((username, password, done) => {
+  User.find({"name" : username}).then((user) => {
 
-  if (username === user.username && password === user.password) {
-    return done(null, user);
-  } else {
-    return done(null, false);
-  }
-
+    if (username === user[0].name && password === user[0].password) {
+      return done(null, user[0]);
+    } else {
+      return done(null, false);
+    }
+  });
 }));
-// view engine setup
+
+
+
 app.set('views', path.join(__dirname, 'build'));
 app.set('view engine', 'pug');
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(cookieParser());
+
+app.use(cookieParser()); // подключаем парсер кук
+
 app.use(express.static(path.join(__dirname, 'build')));
+
+// устанавливаем параметры сессии - настрои позже
 app.use(session({
   secret: 'secret',
   key: 'keys',
   cookie: {
     path: '/',
     httpOnly: false,
-    maxAge: null
+    maxAge: 60*60*1000
   },
   saveUninitialized: false,
   resave: false,
   store: new MongoStore({mongooseConnection: mongoose.connection})
 }));
+// иницилизируем модуль сессий и passport js
 app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/admin', admin);
 
-app.post('/del', (req, res) => {
+// следующий маршрут удаляет сессию
+app.get('/del', (req, res) => {
   req.session.destroy();
   res.json({status: 'Сессия удалена'});
 });

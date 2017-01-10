@@ -1,11 +1,16 @@
 'use strict';
 let express = require('express');
 let router = express.Router();
-let passport = require('passport');
+let passport = require('passport'); // подключаем модуль
 let mongoose = require('mongoose');
 let Skills = require('../../models/skills');
 let Post = require('../../models/post');
 
+
+// куки сессии можно смотреть в маршрутах req.session, параметры passport - req.session.passport
+// в куки можно добавлять свои параметры
+
+// функция проверяет, авторизован ли пользователь - подключается в middleware в те маршруты, где нужна авторизация
 function isLoggedIn(req, res, next) {
   if (req.isAuthenticated()) {
     return next();
@@ -20,12 +25,14 @@ router
   .post('/', function (req, res, next) {
     passport.authenticate('localUser', (err, user) => {
       if (err) {
+        console.log(err);
         return next(err);
       }
       if (!user) {
         return res.json({status: 'Укажите логин и пароль!'})
       }
       req.logIn(user, function (err) {
+        console.log(err);
         if (err) {
           return next(err);
         }
